@@ -1,4 +1,4 @@
-package aahl.apiconsumerapp;
+package aahl.apiconsumerapp.ui.SplashView;
 
 import android.animation.Animator;
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.os.Handler;
 import android.os.Looper;
 import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
+
+import aahl.apiconsumerapp.MainActivity;
+import aahl.apiconsumerapp.R;
 
 public class SplashView extends AppCompatActivity {
 

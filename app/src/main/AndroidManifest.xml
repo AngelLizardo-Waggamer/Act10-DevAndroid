@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
-            android:name="aahl.apiconsumerapp.SplashView"
+            android:name="aahl.apiconsumerapp.ui.SplashView.SplashView"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
