@@ -12,6 +12,10 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import aahl.apiconsumerapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,10 +33,15 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(binding.appBarMain.toolbar);
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+        final Set<Integer> topLevelDestinations = new HashSet<>(Arrays.asList(
+                R.id.nav_home,
+                1
+        ));
+
+        mAppBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinations)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

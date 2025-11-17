@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="nav_item_text_color">#000000</color>
+    <color name="nav_item_selected">#CCCCCC</color>
+
+    <color name="nav_icon_selected">#FF6200EE</color>
+    <color name="nav_icon_default">#666666</color>
+
 </resources>
