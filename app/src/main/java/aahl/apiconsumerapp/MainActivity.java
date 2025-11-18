@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         final Set<Integer> topLevelDestinations = new HashSet<>(Arrays.asList(
                 R.id.nav_home,
-                1
+                R.id.catalogoEpisodios,
+                R.id.catalogoPersonajes,
+                R.id.catalogoLocations
         ));
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinations)

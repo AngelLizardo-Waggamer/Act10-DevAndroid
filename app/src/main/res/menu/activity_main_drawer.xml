@@ -8,5 +8,20 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/baseline_home_24"
             android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/catalogoEpisodios"
+            android:icon="@drawable/baseline_tv_24"
+            android:title="Episodios" />
+
+        <item
+            android:id="@+id/catalogoPersonajes"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Personajes" />
+
+        <item
+            android:id="@+id/catalogoLocations"
+            android:icon="@drawable/baseline_location_on_24"
+            android:title="Lugares" />
     </group>
 </menu>

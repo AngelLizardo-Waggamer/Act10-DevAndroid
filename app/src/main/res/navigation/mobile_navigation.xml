@@ -10,5 +10,20 @@
         android:name="aahl.apiconsumerapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/catalogoEpisodios"
+        android:name="aahl.apiconsumerapp.ui.CatalogoEpisodios.CatalogoEpisodios"
+        android:label="fragment_catalogo_episodios"
+        tools:layout="@layout/fragment_catalogo_episodios" />
+    <fragment
+        android:id="@+id/catalogoLocations"
+        android:name="aahl.apiconsumerapp.ui.CatalogoLocations.CatalogoLocations"
+        android:label="fragment_catalogo_locations"
+        tools:layout="@layout/fragment_catalogo_locations" />
+    <fragment
+        android:id="@+id/catalogoPersonajes"
+        android:name="aahl.apiconsumerapp.ui.CatalogoPersonajes.CatalogoPersonajes"
+        android:label="fragment_catalogo_personajes"
+        tools:layout="@layout/fragment_catalogo_personajes" />
 
 </navigation>

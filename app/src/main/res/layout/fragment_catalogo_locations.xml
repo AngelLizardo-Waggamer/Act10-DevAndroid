@@ -1,8 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="aahl.apiconsumerapp.ui.CatalogoLocations.CatalogoLocations"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="aahl.apiconsumerapp.ui.CatalogoLocations.CatalogoLocations">
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="25dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/schwifty"
+            android:shadowColor="#25E8E2"
+            android:shadowRadius="20"
+            android:text="Lugares"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textColor="#65C213"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Presiona el botón de &quot;Explorar&quot; para ver el detalle de cada lugar."
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_locations"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_maselementos_locations"
+        android:stateListAnimator="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargar más elementos"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="25dp"
+        android:outlineSpotShadowColor="@color/blueRnM"
+        android:shadowRadius="20"
+        android:elevation="6dp"
+        android:backgroundTint="@color/greenRnM"
+        android:drawableLeft="@drawable/baseline_add_24"
+        android:drawableTint="@color/white"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
