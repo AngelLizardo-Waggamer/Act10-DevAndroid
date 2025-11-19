@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.RickNMortyApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/greenRnM</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/greenRnM</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+
         <item name="android:windowBackground">@color/white</item>
+
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
     <style name="DrawerStyle" parent="Widget.Material3.DrawerLayout">
         <item name="itemTextColor">@color/nav_item_text_color</item>
