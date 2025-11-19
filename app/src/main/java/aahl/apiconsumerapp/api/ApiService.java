@@ -9,7 +9,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-public class ApiService {
+public interface ApiService {
 
     @GET("character")
     Call<CharacterCompleteList> getCharacters();
@@ -33,7 +33,7 @@ public class ApiService {
     Call<LocationCompleteList> getLocations();
 
     @GET("location?page={page}")
-    Call<LocationCompleteList> getLocationsByPage(@Path("page") int page);");
+    Call<LocationCompleteList> getLocationsByPage(@Path("page") int page);
 
     @GET("location/{id}")
     Call<Location> getLocationDetails(@Path("id") int locationId);
