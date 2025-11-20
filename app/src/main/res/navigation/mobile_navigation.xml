@@ -12,17 +12,17 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/catalogoEpisodios"
-        android:name="aahl.apiconsumerapp.ui.CatalogoEpisodios.CatalogoEpisodios"
+        android:name="aahl.apiconsumerapp.ui.Episodios.CatalogoEpisodios"
         android:label="fragment_catalogo_episodios"
         tools:layout="@layout/fragment_catalogo_episodios" />
     <fragment
         android:id="@+id/catalogoLocations"
-        android:name="aahl.apiconsumerapp.ui.CatalogoLocations.CatalogoLocations"
+        android:name="aahl.apiconsumerapp.ui.Locations.CatalogoLocations"
         android:label="fragment_catalogo_locations"
         tools:layout="@layout/fragment_catalogo_locations" />
     <fragment
         android:id="@+id/catalogoPersonajes"
-        android:name="aahl.apiconsumerapp.ui.CatalogoPersonajes.CatalogoPersonajes"
+        android:name="aahl.apiconsumerapp.ui.Personajes.CatalogoPersonajes"
         android:label="fragment_catalogo_personajes"
         tools:layout="@layout/fragment_catalogo_personajes" />
 
