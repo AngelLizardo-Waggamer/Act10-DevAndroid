@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 import java.util.List;
 
@@ -50,11 +51,14 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterViewHolder> 
             holder.tvUltimaLocalizacionPersonaje.setText("Última localización: Desconocida");
         }
 
+        int radiusPx = (int) (9 * holder.ivImagenPersonaje.getContext().getResources().getDisplayMetrics().density);
+
         Glide.with(holder.ivImagenPersonaje.getContext())
                 .load(character.getImage())
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .error(R.drawable.ic_launcher_foreground)
-                .circleCrop()
+                .centerCrop()
+                .transform(new RoundedCorners(radiusPx))
                 .into(holder.ivImagenPersonaje);
     }
 
