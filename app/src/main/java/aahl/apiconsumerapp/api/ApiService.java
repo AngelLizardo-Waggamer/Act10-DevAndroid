@@ -1,5 +1,6 @@
 package aahl.apiconsumerapp.api;
 
+import aahl.apiconsumerapp.models.Character;
 import aahl.apiconsumerapp.models.CharacterCompleteList;
 import aahl.apiconsumerapp.models.Episode;
 import aahl.apiconsumerapp.models.EpisodeCompleteList;
@@ -8,14 +9,15 @@ import aahl.apiconsumerapp.models.LocationCompleteList;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
 
     @GET("character")
     Call<CharacterCompleteList> getCharacters();
 
-    @GET("character?page={page}")
-    Call<CharacterCompleteList> getCharactersByPage(@Path("page") int page);
+    @GET("character")
+    Call<CharacterCompleteList> getCharactersByPage(@Query("page") int page);
 
     @GET("character/{id}")
     Call<Character> getCharacterDetails(@Path("id") int characterId);
@@ -23,8 +25,8 @@ public interface ApiService {
     @GET("episode")
     Call<EpisodeCompleteList> getEpisodes();
 
-    @GET("episode?page={page}")
-    Call<EpisodeCompleteList> getEpisodesByPage(@Path("page") int page);
+    @GET("episode")
+    Call<EpisodeCompleteList> getEpisodesByPage(@Query("page") int page);
 
     @GET("episode/{id}")
     Call<Episode> getEpisodeDetails(@Path("id") int episodeId);
@@ -32,8 +34,8 @@ public interface ApiService {
     @GET("location")
     Call<LocationCompleteList> getLocations();
 
-    @GET("location?page={page}")
-    Call<LocationCompleteList> getLocationsByPage(@Path("page") int page);
+    @GET("location")
+    Call<LocationCompleteList> getLocationsByPage(@Query("page") int page);
 
     @GET("location/{id}")
     Call<Location> getLocationDetails(@Path("id") int locationId);
