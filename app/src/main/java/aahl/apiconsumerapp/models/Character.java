@@ -3,14 +3,27 @@ package aahl.apiconsumerapp.models;
 // Sirve para /api/character/:id
 public class Character {
 
+    public static class LocationReference {
+        private String name;
+        private String url;
+
+        public String getName() {
+            return name;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+    }
+
     private int id;
     private String name;
     private String status;
     private String species;
     private String type;
-    private Object origin; // {name, url}
+    private LocationReference origin;
     private String gender;
-    private Object location; // {name, url}
+    private LocationReference location;
     private String image; // URL
     private String[] episode; // Array de URLs de episodios
 
@@ -34,7 +47,7 @@ public class Character {
         return type;
     }
 
-    public Object getOrigin() {
+    public LocationReference getOrigin() {
         return origin;
     }
 
@@ -42,7 +55,7 @@ public class Character {
         return gender;
     }
 
-    public Object getLocation() {
+    public LocationReference getLocation() {
         return location;
     }
 
