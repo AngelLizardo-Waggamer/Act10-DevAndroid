@@ -5,10 +5,10 @@ import java.util.List;
 // Sirve para /api/character
 public class CharacterCompleteList {
 
-    private Object info; // {count, pages, next, prev}
-    private List<Character> results; // Lista de personajes hasta la página indicada
+    private PageInfo info;
+    private List<Character> results;
 
-    public Object getInfo() {
+    public PageInfo getInfo() {
         return info;
     }
 

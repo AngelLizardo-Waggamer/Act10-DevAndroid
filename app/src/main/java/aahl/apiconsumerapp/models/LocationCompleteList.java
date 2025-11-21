@@ -4,10 +4,10 @@ import java.util.List;
 
 public class LocationCompleteList {
 
-    private Object info; // {count, pages, next, prev}
-    private List<Location> results; // Lista de lugares hasta la página indicada
+    private PageInfo info;
+    private List<Location> results;
 
-    public Object getInfo() {
+    public PageInfo getInfo() {
         return info;
     }
 

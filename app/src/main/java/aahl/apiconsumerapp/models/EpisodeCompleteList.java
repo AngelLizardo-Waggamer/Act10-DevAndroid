@@ -4,10 +4,10 @@ import java.util.List;
 
 public class EpisodeCompleteList {
 
-    private Object info; // {count, pages, next, prev}
-    private List<Episode> results; // Lista de Episodios hasta la página indicada
+    private PageInfo info;
+    private List<Episode> results;
 
-    public Object getInfo() {
+    public PageInfo getInfo() {
         return info;
     }
 
