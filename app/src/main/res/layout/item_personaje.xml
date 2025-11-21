@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/item_general_bg"
+    android:gravity="center_vertical"
+    >
+
+    <ImageView
+        android:id="@+id/ivImagen_item_personaje"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Imagen del personaje"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNombre_item_personaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del personaje"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tvEspecie_item_personaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Especie"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/tvUltimaLocalizacion_item_personaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Última localización conocida"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDetalles_item_personaje"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="wrap_content"
+        android:text="Ver"
+        />
+
+</LinearLayout>
+

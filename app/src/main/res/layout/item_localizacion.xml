@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/item_general_bg"
+    android:gravity="center_vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNombre_item_localizacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la localización"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tvTipo_item_localizacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo"
+            android:layout_marginTop="4dp"
+            />
+
+        <TextView
+            android:id="@+id/tvDimension_item_localizacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dimensión"
+            android:layout_marginTop="4dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDetalles_item_localizacion"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="wrap_content"
+        android:text="Detalles"
+        />
+
+</LinearLayout>
+

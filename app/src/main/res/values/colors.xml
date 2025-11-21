@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="greenRnM">#FF65C213</color>
+    <color name="greenRnMFaded">#9965C213</color>
     <color name="blueRnM">#FF25E8E2</color>
 
 
