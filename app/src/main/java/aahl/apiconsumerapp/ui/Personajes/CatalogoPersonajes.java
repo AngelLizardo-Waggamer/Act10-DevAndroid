@@ -8,9 +8,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import androidx.navigation.Navigation;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
@@ -61,7 +62,7 @@ public class CatalogoPersonajes extends Fragment {
                     // Si la posición del último item visible es mayor al total de items menos tres,
                     // lo cual significa que está cerca de llegar al final, y todavía hay más
                     // páginas de personajes para consultar, se muestra el FAB
-                    if (lastVisibleItemPosition >= totalItemsCount - 3 && hasMorePages && !isLoading){
+                    if (lastVisibleItemPosition == totalItemsCount && hasMorePages && !isLoading){
                         fabMasElementos.show();
                     }
 
@@ -79,6 +80,17 @@ public class CatalogoPersonajes extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         adapter = new CharacterAdapter(characterList);
+
+        adapter.setOnClickListener(position -> {
+            // Crear el Bundle con el personaje
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("character", characterList.get(position));
+
+            // Navegar al fragmento de detalle
+            Navigation.findNavController(recyclerView)
+                    .navigate(R.id.action_catalogoPersonajes_to_detallePersonaje, bundle);
+        });
+
         recyclerView.setAdapter(adapter);
 
         // Configuración del scroll listener para que el fab aparezca o desaparezca

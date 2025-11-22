@@ -13,17 +13,45 @@
     <fragment
         android:id="@+id/catalogoEpisodios"
         android:name="aahl.apiconsumerapp.ui.Episodios.CatalogoEpisodios"
-        android:label="fragment_catalogo_episodios"
-        tools:layout="@layout/fragment_catalogo_episodios" />
+        android:label="Catálogo de episodios"
+        tools:layout="@layout/fragment_catalogo_episodios">
+        <action
+            android:id="@+id/action_catalogoEpisodios_to_detalleEpisodio"
+            app:destination="@id/detalleEpisodio"
+            />
+    </fragment>
     <fragment
         android:id="@+id/catalogoLocations"
         android:name="aahl.apiconsumerapp.ui.Locations.CatalogoLocations"
-        android:label="fragment_catalogo_locations"
+        android:label="Catálogo de localizaciones"
         tools:layout="@layout/fragment_catalogo_locations" />
     <fragment
         android:id="@+id/catalogoPersonajes"
         android:name="aahl.apiconsumerapp.ui.Personajes.CatalogoPersonajes"
-        android:label="fragment_catalogo_personajes"
-        tools:layout="@layout/fragment_catalogo_personajes" />
+        android:label="Catálogo de personajes"
+        tools:layout="@layout/fragment_catalogo_personajes" >
+        <action
+            android:id="@+id/action_catalogoPersonajes_to_detallePersonaje"
+            app:destination="@id/detallePersonaje" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallePersonaje"
+        android:name="aahl.apiconsumerapp.ui.Personajes.DetallePersonaje"
+        android:label="Detalles del Personaje"
+        tools:layout="@layout/disp_detalle_personaje" >
+        <argument
+            android:name="character"
+            app:argType="aahl.apiconsumerapp.models.Character" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalleEpisodio"
+        android:name="aahl.apiconsumerapp.ui.Episodios.DetalleEpisodio"
+        android:label="Detalles del Episodio"
+        tools:layout="@layout/disp_detalle_episodio">
+        <argument
+            android:name="episode"
+            app:argType="aahl.apiconsumerapp.models.Episode"/>
+    </fragment>
 
 </navigation>
