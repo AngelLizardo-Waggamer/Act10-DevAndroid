@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:text="Presiona el botón de &quot;Explorar&quot; para ver el detalle de cada personaje."
+            android:text="Presiona el botón de &quot;Ver&quot; para ver el detalle de cada personaje."
             />
 
         <androidx.recyclerview.widget.RecyclerView
