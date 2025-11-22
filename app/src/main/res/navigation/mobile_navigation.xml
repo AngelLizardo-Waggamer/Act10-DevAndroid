@@ -24,7 +24,12 @@
         android:id="@+id/catalogoLocations"
         android:name="aahl.apiconsumerapp.ui.Locations.CatalogoLocations"
         android:label="Catálogo de localizaciones"
-        tools:layout="@layout/fragment_catalogo_locations" />
+        tools:layout="@layout/fragment_catalogo_locations">
+        <action
+            android:id="@+id/action_catalogoLocations_to_detalleLocation"
+            app:destination="@id/detalleLocation"
+            />
+    </fragment>
     <fragment
         android:id="@+id/catalogoPersonajes"
         android:name="aahl.apiconsumerapp.ui.Personajes.CatalogoPersonajes"
@@ -52,6 +57,15 @@
         <argument
             android:name="episode"
             app:argType="aahl.apiconsumerapp.models.Episode"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detalleLocation"
+        android:name="aahl.apiconsumerapp.ui.Locations.DetalleLocation"
+        android:label="Detalles de la localización"
+        tools:layout="@layout/disp_detalle_location">
+        <argument
+            android:name="location"
+            app:argType="aahl.apiconsumerapp.models.Location"/>
     </fragment>
 
 </navigation>
