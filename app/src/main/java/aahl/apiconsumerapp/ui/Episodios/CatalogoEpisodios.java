@@ -62,7 +62,7 @@ public class CatalogoEpisodios extends Fragment {
                     // Si la posición del último item visible es mayor al total de items menos tres,
                     // lo cual significa que está cerca de llegar al final, y todavía hay más
                     // páginas de personajes para consultar, se muestra el FAB
-                    if (lastVisibleItemPosition >= totalItemsCount - 3 && hasMorePages && !isLoading){
+                    if (lastVisibleItemPosition >= totalItemsCount - 1 && hasMorePages && !isLoading){
                         fabMasElementos.show();
                     }
 
