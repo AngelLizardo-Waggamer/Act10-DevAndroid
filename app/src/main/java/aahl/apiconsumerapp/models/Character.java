@@ -1,20 +1,9 @@
 package aahl.apiconsumerapp.models;
 
+import java.io.Serializable;
+
 // Sirve para /api/character/:id
-public class Character {
-
-    public static class LocationReference {
-        private String name;
-        private String url;
-
-        public String getName() {
-            return name;
-        }
-
-        public String getUrl() {
-            return url;
-        }
-    }
+public class Character implements Serializable {
 
     private int id;
     private String name;

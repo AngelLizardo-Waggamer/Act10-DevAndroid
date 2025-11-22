@@ -1,7 +1,9 @@
 package aahl.apiconsumerapp.models;
 
+import java.io.Serializable;
+
 // Sirve para /api/episode/:id
-public class Episode {
+public class Episode implements Serializable {
 
     private int id;
     private String name;
