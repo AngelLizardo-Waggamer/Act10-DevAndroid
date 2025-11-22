@@ -47,6 +47,12 @@
         <argument
             android:name="character"
             app:argType="aahl.apiconsumerapp.models.Character" />
+        <action
+            android:id="@+id/action_detallePersonaje_to_detalleEpisodio"
+            app:destination="@id/detalleEpisodio" />"
+        <action
+            android:id="@+id/action_detallePersonaje_to_detalleLocation"
+            app:destination="@id/detalleLocation" />"
     </fragment>
 
     <fragment
