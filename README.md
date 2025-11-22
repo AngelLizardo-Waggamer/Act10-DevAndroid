@@ -1,6 +1,6 @@
-# Aplicación template de SideBar
-El objetivo de esta aplicación fue principalmente el de utilizar el código de la plantilla de 
-navegación con SideBar de forma que nuestros datos aparezcan y nuestras aplicaciones tengan una
-identidad propia. En mi caso, coloqué una animación como SplashScreen (pantalla animada de cuando
-se abre la aplicación) que fuera divertida para que sea fácil identificar mis trabajos de ahora
-en adelante.
+# Aplicación consumidora de API de Rick y Morty
+El objetivo de esta aplicación, además de implementar el template de SideBar que previamente se creó
+con el objetivo precisamente de tener una identidad gráfica unificada, es el de implementar
+pantallas "reales" que usen datos "reales" de una fuente de datos externa. Esta fuente de datos
+se eligió por consenso general que fuera una API gratuita de Rick y Morty, la cual se 
+consumió con Retrofit.
