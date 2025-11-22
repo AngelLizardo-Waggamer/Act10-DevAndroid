@@ -49,10 +49,10 @@
             app:argType="aahl.apiconsumerapp.models.Character" />
         <action
             android:id="@+id/action_detallePersonaje_to_detalleEpisodio"
-            app:destination="@id/detalleEpisodio" />"
+            app:destination="@id/detalleEpisodio" />
         <action
             android:id="@+id/action_detallePersonaje_to_detalleLocation"
-            app:destination="@id/detalleLocation" />"
+            app:destination="@id/detalleLocation" />
     </fragment>
 
     <fragment
@@ -63,6 +63,9 @@
         <argument
             android:name="episode"
             app:argType="aahl.apiconsumerapp.models.Episode"/>
+        <action
+            android:id="@+id/action_detalleEpisodio_to_detallePersonaje"
+            app:destination="@id/detallePersonaje" />
     </fragment>
     <fragment
         android:id="@+id/detalleLocation"
@@ -72,6 +75,9 @@
         <argument
             android:name="location"
             app:argType="aahl.apiconsumerapp.models.Location"/>
+        <action
+            android:id="@+id/action_detalleLocation_to_detallePersonaje"
+            app:destination="@id/detallePersonaje" />
     </fragment>
 
 </navigation>
