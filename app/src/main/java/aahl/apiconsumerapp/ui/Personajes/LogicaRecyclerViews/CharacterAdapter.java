@@ -15,6 +15,7 @@ import java.util.List;
 import aahl.apiconsumerapp.R;
 import aahl.apiconsumerapp.interfaces.CharacterClickListener;
 import aahl.apiconsumerapp.models.Character;
+import aahl.apiconsumerapp.models.LocationReference;
 
 public class CharacterAdapter extends RecyclerView.Adapter<CharacterViewHolder> {
 
@@ -40,11 +41,10 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull CharacterViewHolder holder, int position) {
         Character character = characters.get(position);
-
         holder.tvNombrePersonaje.setText(character.getName());
         holder.tvEspeciePersonaje.setText(character.getSpecies());
 
-        Character.LocationReference location = character.getLocation();
+        LocationReference location = character.getLocation();
         if (location != null && location.getName() != null) {
             holder.tvUltimaLocalizacionPersonaje.setText("Última localización: " + location.getName());
         } else {
