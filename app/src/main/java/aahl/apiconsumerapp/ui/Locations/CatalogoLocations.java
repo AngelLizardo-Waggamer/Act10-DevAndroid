@@ -163,8 +163,8 @@ public class CatalogoLocations extends Fragment {
         Retrofit retrofitClient = RetrofitClient.getRetrofitInstance();
         apiService = retrofitClient.create(ApiService.class);
 
-        // Cargar la primera pagina
-        cargarLocations(currentPage);
+        // Cargar la primera pagina SI la lista está vacía (soy un genio)
+        if (locationList.isEmpty()) cargarLocations(currentPage);
 
         // Click listener del FAB
         fabMasElementos.setOnClickListener(v -> cargarMasLocations());

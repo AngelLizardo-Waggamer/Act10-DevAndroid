@@ -165,8 +165,8 @@ public class CatalogoEpisodios extends Fragment {
         Retrofit retrofitClient = RetrofitClient.getRetrofitInstance();
         apiService = retrofitClient.create(ApiService.class);
 
-        // Cargar la primera página
-        cargarEpisodios(currentPage);
+        // Cargar la primera pagina SI la lista está vacía (soy un genio)
+        if (episodeList.isEmpty()) cargarEpisodios(currentPage);
 
         // Click listener del FAB
         fabMasElementos.setOnClickListener(v -> cargarMasEpisodios());

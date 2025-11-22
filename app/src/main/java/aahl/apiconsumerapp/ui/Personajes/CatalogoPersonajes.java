@@ -167,8 +167,8 @@ public class CatalogoPersonajes extends Fragment {
         Retrofit retrofitClient = RetrofitClient.getRetrofitInstance();
         apiService = retrofitClient.create(ApiService.class);
 
-        // Cargar la primera pagina
-        cargarPersonajes(currentPage);
+        // Cargar la primera pagina SI la lista está vacía (soy un genio)
+        if (characterList.isEmpty()) cargarPersonajes(currentPage);
 
         // Click listener del FAB
         fabMasElementos.setOnClickListener(v -> cargarMasElementos());
